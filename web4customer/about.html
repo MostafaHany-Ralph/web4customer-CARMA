@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>من نحن | CARMA</title>
+  <link rel="icon" type="image/png" href="assets/carma_icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body lang="ar">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/carma_logo.png" alt="CARMA" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+        <span class="logo-text" style="display:none;">CARMA</span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link" data-i18n="nav_home">الرئيسية</a>
+        <a href="about.html" class="nav-link active" data-i18n="nav_about">من نحن</a>
+        <a href="for-you.html" class="nav-link" data-i18n="nav_foryou">لك أنت</a>
+        <a href="login.html" class="nav-link" data-i18n="nav_login">تسجيل الدخول</a>
+        <a href="login.html?tab=signup" class="nav-btn-primary" data-i18n="nav_signup">إنشاء حساب</a>
+      </div>
+
+      <div class="nav-controls">
+        <button class="nav-ctrl-btn" data-action="toggle-lang" title="Toggle Language">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span class="lang-toggle-txt">English</span>
+        </button>
+
+        <button class="nav-ctrl-btn theme-icon" data-action="toggle-theme" title="Toggle Theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-tag">عن CARMA</span>
+      <h1>من <span class="text-primary">نحن</span></h1>
+      <p>منصة متكاملة وُلدت من الحاجة الحقيقية لتجربة موثوقة ومريحة في كل ما يخص سيارتك</p>
+    </div>
+  </section>
+
+  <!-- ===== STORY ===== -->
+  <section class="about-story">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-text reveal">
+          <h2>فكرة <span class="text-primary">CARMA</span></h2>
+          <p class="story-lead">
+            CARMA انطلقت لتكون الحل الشامل والذكي لكل أصحاب السيارات في مصر، من خلال دمج كل ما يحتاجه السائق في تطبيق واحد سلس.
+          </p>
+          <p>
+            بدل ما تدور على ميكانيكي مجهول أو تنتظر ونش لساعات، أو تلف بين محلات الإكسسوارات بدون معرفة توافر المنتجات والأسعار؛ CARMA يربطك بأفضل مراكز الخدمة ومزودي الخدمات المعتمدين والموثوقين مباشرة.
+          </p>
+          <p>
+            نعمل على بناء بيئة متكاملة تضمن الشفافية في الأسعار، الموثوقية في الأداء، والسرعة الفائقة في الاستجابة على مدار الساعة.
+          </p>
+        </div>
+
+        <div class="about-cards reveal">
+          <div class="about-card ac-orange">
+            <div class="about-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+            </div>
+            <div>
+              <h4>الرؤية</h4>
+              <p>أن نصبح المنصة الرقمية الأولى لخدمات السيارات في مصر والشرق الأوسط.</p>
+            </div>
+          </div>
+
+          <div class="about-card ac-dark">
+            <div class="about-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <div>
+              <h4>الاعتماد والجودة</h4>
+              <p>فحص ومراجعة جميع مزودي الخدمات لضمان أعلى معايير الأمان والاحترافية.</p>
+            </div>
+          </div>
+
+          <div class="about-card ac-glass">
+            <div class="about-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 14 14"></polyline>
+              </svg>
+            </div>
+            <div>
+              <h4>السرعة والموثوقية</h4>
+              <p>تتبع فوري للطلبات واستجابة طوارئ على مدار 24 ساعة يومياً.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MISSION & PILLARS ===== -->
+  <section class="mission-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">ركائزنا</span>
+        <h2 class="section-title">قيم نبني عليها <span class="text-primary">ثقة عملائنا</span></h2>
+      </div>
+
+      <div class="mission-grid">
+        <div class="mission-card reveal">
+          <div class="mission-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <h3>منظومة رقمية موحدة</h3>
+          <p>ربط أصحاب السيارات ومقدمي الخدمة من خلال واجهات تفاعلية لحظية تدير كل خطوة من الطلب وحتى الإتمام.</p>
+        </div>
+
+        <div class="mission-card reveal">
+          <div class="mission-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h3>أمان وشفافية</h3>
+          <p>تقييمات شفافة، تسعير واضح بدون مفاجآت، وتأمين وحماية كاملة لبيانات وممتلكات العميل.</p>
+        </div>
+
+        <div class="mission-card reveal">
+          <div class="mission-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3>شراكات معتمدة</h3>
+          <p>نختار شركاءنا بعناية من أفضل ورش الصيانة ومحلات الإكسسوارات ومقدمي خدمات الإنقاذ.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/carma_logo.png" alt="CARMA" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+          <span class="footer-logo-txt">CARMA</span>
+          <p data-i18n="ft_desc">رفيقك على الطريق — تطبيق متكامل لكل خدمات سيارتك</p>
+        </div>
+        <div class="footer-links-col">
+          <h5 data-i18n="ft_site">الموقع</h5>
+          <a href="index.html" data-i18n="nav_home">الرئيسية</a>
+          <a href="about.html" data-i18n="nav_about">من نحن</a>
+          <a href="for-you.html" data-i18n="nav_foryou">لك أنت</a>
+        </div>
+        <div class="footer-links-col">
+          <h5 data-i18n="ft_account">الحساب</h5>
+          <a href="login.html" data-i18n="nav_login">تسجيل الدخول</a>
+          <a href="login.html?tab=signup" data-i18n="nav_signup">إنشاء حساب</a>
+        </div>
+        <div class="footer-links-col">
+          <h5 data-i18n="ft_app">التطبيق</h5>
+          <a href="index.html#download" onclick="showComingSoon('customer')" data-i18n="dl_customer">تطبيق العميل</a>
+          <a href="index.html#download" onclick="showComingSoon('provider')" data-i18n="dl_provider">تطبيق مقدم الخدمة</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="ft_copy">© 2026 CARMA. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="modalComingSoon" onclick="hideComingSoon()">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <div class="modal-box-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 14 14"></polyline>
+        </svg>
+      </div>
+      <h3 data-i18n="coming_title">قريبًا!</h3>
+      <p data-i18n="coming_p">التطبيق سيكون متاح للتحميل قريبًا. ابقى متابعنا!</p>
+      <button class="btn-primary btn-full" onclick="hideComingSoon()" data-i18n="ok">تمام</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

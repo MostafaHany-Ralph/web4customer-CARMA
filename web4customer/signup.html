@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>إنشاء حساب | CARMA</title>
+  <link rel="icon" type="image/png" href="assets/carma_icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body lang="ar">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/carma_logo.png" alt="CARMA" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+        <span class="logo-text" style="display:none;">CARMA</span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link" data-i18n="nav_home">الرئيسية</a>
+        <a href="about.html" class="nav-link" data-i18n="nav_about">من نحن</a>
+        <a href="for-you.html" class="nav-link" data-i18n="nav_foryou">لك أنت</a>
+        <a href="login.html" class="nav-link" data-i18n="nav_login">تسجيل الدخول</a>
+        <a href="signup.html" class="nav-btn-primary active" data-i18n="nav_signup">إنشاء حساب</a>
+      </div>
+
+      <div class="nav-controls">
+        <button class="nav-ctrl-btn" data-action="toggle-lang" title="Toggle Language">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span class="lang-toggle-txt">English</span>
+        </button>
+
+        <button class="nav-ctrl-btn theme-icon" data-action="toggle-theme" title="Toggle Theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== AUTH PAGE (Sign Up Default) ===== -->
+  <main class="auth-page">
+    <div class="auth-container">
+
+      <!-- Interactive Tab Switcher -->
+      <div class="auth-switcher">
+        <button class="auth-tab" id="tabLogin" type="button" data-i18n="login_tab">تسجيل الدخول</button>
+        <button class="auth-tab active" id="tabSignup" type="button" data-i18n="signup_tab">إنشاء حساب</button>
+      </div>
+
+      <!-- Auth Card -->
+      <div class="auth-card">
+        <div class="auth-card-header">
+          <img src="assets/carma_logo.png" alt="CARMA" class="auth-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+          <div class="auth-logo-txt">CARMA</div>
+          <h2 id="authHeading" data-i18n="signup_title">انضم لـ CARMA</h2>
+          <p id="authSubheading" data-i18n="signup_sub">سجّل في ثوانٍ وابدأ رحلتك</p>
+        </div>
+
+        <div class="auth-panels">
+
+          <!-- ===== PANEL 1: LOGIN (hidden on signup.html) ===== -->
+          <div class="auth-panel hidden slide-in" id="loginPanel">
+            <div class="auth-error" id="loginError">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+              <span></span>
+            </div>
+
+            <div class="auth-success" id="loginSuccess">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span></span>
+            </div>
+
+            <form class="auth-form" id="loginForm" novalidate>
+              <div class="form-group">
+                <label for="loginEmail" data-i18n="email_label">البريد الإلكتروني</label>
+                <div class="input-wrap">
+                  <div class="input-ic">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <input type="email" id="loginEmail" name="email" data-i18n-ph="email_ph" placeholder="example@email.com" required autocomplete="email" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="loginPass" data-i18n="pass_label">كلمة المرور</label>
+                <div class="input-wrap">
+                  <div class="input-ic">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                  </div>
+                  <input type="password" id="loginPass" name="password" data-i18n-ph="pass_ph" placeholder="كلمة المرور" required autocomplete="current-password" />
+                  <button type="button" class="pass-toggle" data-target="loginPass" aria-label="Toggle password visibility">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="form-row-opts">
+                <label class="remember-wrap">
+                  <input type="checkbox" id="rememberMe" checked />
+                  <span data-i18n="remember">تذكرني</span>
+                </label>
+                <a href="javascript:void(0)" onclick="openModal('modalForgot')" class="forgot-link" data-i18n="forgot">نسيت كلمة المرور؟</a>
+              </div>
+
+              <button type="submit" class="btn-primary btn-full" id="loginBtn" data-i18n="btn_login">تسجيل الدخول</button>
+
+              <div class="auth-divider"><span>أو</span></div>
+
+              <div class="app-notice">
+                <div class="app-notice-ic">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                  </svg>
+                </div>
+                <div class="app-notice-text">
+                  <strong data-i18n="app_notice_h">خدمات CARMA على موبايلك</strong>
+                  <p data-i18n="app_notice_p">الخدمات متاحة بالكامل من تطبيق الموبايل. حمّل التطبيق واستمتع بكل الخدمات.</p>
+                </div>
+              </div>
+
+              <div class="auth-footer-link">
+                <span data-i18n="no_account">ما عندكش حساب؟</span>
+                <a href="javascript:void(0)" data-goto="signup" data-i18n="goto_signup">سجّل دلوقتي</a>
+              </div>
+            </form>
+          </div>
+
+          <!-- ===== PANEL 2: SIGNUP (active on signup.html) ===== -->
+          <div class="auth-panel" id="signupPanel">
+            <div class="auth-error" id="signupError">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+              <span></span>
+            </div>
+
+            <div class="auth-success" id="signupSuccess">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span></span>
+            </div>
+
+            <form class="auth-form" id="signupForm" novalidate>
+              <div class="form-group">
+                <label for="signupName" data-i18n="name_label">الاسم الكامل</label>
+                <div class="input-wrap">
+                  <div class="input-ic">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                  </div>
+                  <input type="text" id="signupName" name="name" data-i18n-ph="name_ph" placeholder="الاسم بالكامل" required autocomplete="name" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="signupEmail" data-i18n="email_label">البريد الإلكتروني</label>
+                <div class="input-wrap">
+                  <div class="input-ic">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <input type="email" id="signupEmail" name="email" data-i18n-ph="email_ph" placeholder="example@email.com" required autocomplete="email" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="signupPhone" data-i18n="phone_label">رقم الموبايل</label>
+                <div class="input-wrap">
+                  <div class="input-ic">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                      <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                    </svg>
+                  </div>
+                  <input type="tel" id="signupPhone" name="phone" data-i18n-ph="phone_ph" placeholder="01xxxxxxxxx" required autocomplete="tel" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="signupPass" data-i18n="pass_label">كلمة المرور</label>
+                  <div class="input-wrap">
+                    <div class="input-ic">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                      </svg>
+                    </div>
+                    <input type="password" id="signupPass" name="password" data-i18n-ph="pass_ph" placeholder="8 أحرف على الأقل (حرف كبير، رقم، رمز)" required minlength="8" />
+                    <button type="button" class="pass-toggle" data-target="signupPass" aria-label="Toggle password visibility">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="signupConf" data-i18n="conf_label">تأكيد كلمة المرور</label>
+                  <div class="input-wrap">
+                    <div class="input-ic">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                      </svg>
+                    </div>
+                    <input type="password" id="signupConf" name="confirm" data-i18n-ph="conf_ph" placeholder="تأكيد كلمة المرور" required />
+                    <button type="button" class="pass-toggle" data-target="signupConf" aria-label="Toggle password visibility">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <button type="submit" class="btn-primary btn-full" id="signupBtn" data-i18n="btn_signup">إنشاء الحساب</button>
+
+              <div class="auth-footer-link">
+                <span data-i18n="have_account">عندك حساب؟</span>
+                <a href="javascript:void(0)" data-goto="login" data-i18n="goto_login">سجّل دخولك</a>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modals -->
+  <div class="modal-overlay" id="modalForgot" onclick="closeModal('modalForgot')">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <div class="modal-box-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        </svg>
+      </div>
+      <h3>استعادة كلمة المرور</h3>
+      <p>يمكنك إعادة تعيين كلمة المرور بكل سهولة من خلال تطبيق الموبايل بتأكيد رقم هاتفك.</p>
+      <div class="modal-actions">
+        <button class="btn-primary btn-full" onclick="closeModal('modalForgot'); showComingSoon();">تحميل التطبيق</button>
+        <button class="btn-outline btn-full" onclick="closeModal('modalForgot')">إغلاق</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modalAppNotice" onclick="closeModal('modalAppNotice')">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <div class="modal-box-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+          <line x1="12" y1="18" x2="12.01" y2="18"></line>
+        </svg>
+      </div>
+      <h3 data-i18n="app_notice_h">خدمات CARMA على موبايلك</h3>
+      <p data-i18n="app_notice_p">
+        خدمات CARMA — الصيانة، الغسيل، الإكسسوارات، الطوارئ والونش — متاحة بالكامل من خلال تطبيق الموبايل.
+      </p>
+      <div class="modal-actions">
+        <button class="btn-primary btn-full" onclick="closeModal('modalAppNotice'); showComingSoon();" data-i18n="dl_btn">تحميل التطبيق</button>
+        <button class="btn-outline btn-full" onclick="closeModal('modalAppNotice')" data-i18n="cancel">إلغاء</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modalComingSoon" onclick="hideComingSoon()">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <div class="modal-box-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 14 14"></polyline>
+        </svg>
+      </div>
+      <h3 data-i18n="coming_title">قريبًا!</h3>
+      <p data-i18n="coming_p">التطبيق سيكون متاح للتحميل قريبًا. ابقى متابعنا!</p>
+      <button class="btn-primary btn-full" onclick="hideComingSoon()" data-i18n="ok">تمام</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CARMA | رفيقك على الطريق</title>
+  <meta name="description" content="CARMA - التطبيق المتكامل لخدمات السيارات في مصر. صيانة، غسيل، إكسسوارات، طوارئ، ونش." />
+  <link rel="icon" type="image/png" href="assets/carma_icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body lang="ar">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/carma_logo.png" alt="CARMA" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+        <span class="logo-text" style="display:none;">CARMA</span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link active" data-i18n="nav_home">الرئيسية</a>
+        <a href="about.html" class="nav-link" data-i18n="nav_about">من نحن</a>
+        <a href="for-you.html" class="nav-link" data-i18n="nav_foryou">لك أنت</a>
+        <a href="login.html" class="nav-link" data-i18n="nav_login">تسجيل الدخول</a>
+        <a href="login.html?tab=signup" class="nav-btn-primary" data-i18n="nav_signup">إنشاء حساب</a>
+      </div>
+
+      <div class="nav-controls">
+        <!-- Language Switcher -->
+        <button class="nav-ctrl-btn" data-action="toggle-lang" title="Toggle Language">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span class="lang-toggle-txt">English</span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button class="nav-ctrl-btn theme-icon" data-action="toggle-theme" title="Toggle Theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-container">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span class="badge-pulse"></span>
+          <span data-i18n="hero_badge">الآن متاح في مصر</span>
+        </div>
+        <h1 class="hero-title">
+          <span data-i18n="hero_title1">رفيقك</span><br />
+          <span class="text-primary" data-i18n="hero_title2">على الطريق</span>
+        </h1>
+        <p class="hero-sub" data-i18n="hero_sub">
+          CARMA هو تطبيقك الشامل لكل خدمات السيارات — صيانة، غسيل، إكسسوارات، طوارئ ووَنش. كل اللي محتاجه في مكان واحد.
+        </p>
+        <div class="hero-actions">
+          <a href="#download" class="btn-primary btn-large">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span data-i18n="hero_cta1">حمّل التطبيق</span>
+          </a>
+          <a href="about.html" class="btn-outline btn-large" data-i18n="hero_cta2">اعرف أكثر</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num" data-i18n="stat1_n">+5</span>
+            <span class="stat-label" data-i18n="stat1_l">خدمات متكاملة</span>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat-item">
+            <span class="stat-num" data-i18n="stat2_n">24/7</span>
+            <span class="stat-label" data-i18n="stat2_l">خدمات الطوارئ</span>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat-item">
+            <span class="stat-num" data-i18n="stat3_n">100%</span>
+            <span class="stat-label" data-i18n="stat3_l">مجانيًا للتسجيل</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modern Seamless Logo Display -->
+      <div class="hero-visual">
+        <div class="logo-display">
+          <div class="logo-display-ring"></div>
+          <div class="logo-display-ring2"></div>
+          <div class="logo-display-glow"></div>
+          <img src="assets/carma_logo.png" alt="CARMA Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+          <div class="logo-display-fallback" style="display:none;">CARMA</div>
+
+          <div class="hero-float f1">
+            <span class="hero-float-dot"></span>
+            <span>طلب معتمد وفوري</span>
+          </div>
+          <div class="hero-float f2">
+            <span class="hero-float-dot"></span>
+            <span>خدمة على مدار الساعة</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span data-i18n="hero_scroll">اسحب للأسفل</span>
+      <div class="scroll-caret"></div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="svc_tag">خدماتنا</span>
+        <h2 class="section-title">
+          <span data-i18n="svc_title1">كل اللي محتاجه</span><br />
+          <span class="text-primary" data-i18n="svc_title2">في تطبيق واحد</span>
+        </h2>
+        <p class="section-desc" data-i18n="svc_desc">
+          سواء صيانة أو غسيل أو إكسسوارات أو ونش — CARMA وفّرها كلها
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1: Maintenance -->
+        <div class="service-card reveal">
+          <div class="svc-icon-wrap ic-maintenance">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+            </svg>
+          </div>
+          <h3 data-i18n="svc1_h">الصيانة</h3>
+          <p data-i18n="svc1_p">احجز ميكانيكي متخصص يجيلك أو روح لأقرب مركز صيانة معتمد بسهولة</p>
+        </div>
+
+        <!-- Service 2: Car Wash -->
+        <div class="service-card reveal">
+          <div class="svc-icon-wrap ic-wash">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path>
+              <circle cx="7" cy="17" r="2"></circle>
+              <path d="M9 17h6"></path>
+              <circle cx="17" cy="17" r="2"></circle>
+            </svg>
+          </div>
+          <h3 data-i18n="svc2_h">غسيل السيارات</h3>
+          <p data-i18n="svc2_p">خدمة غسيل بالبيت أو عند أقرب مغسلة معتمدة، كيماوي أو عادي</p>
+        </div>
+
+        <!-- Service 3: Accessories Store -->
+        <div class="service-card featured reveal">
+          <div class="featured-tag">جديد</div>
+          <div class="svc-icon-wrap ic-acc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <circle cx="12" cy="12" r="3"></circle>
+              <line x1="12" y1="2" x2="12" y2="9"></line>
+              <line x1="12" y1="15" x2="12" y2="22"></line>
+              <line x1="4.93" y1="4.93" x2="9.88" y2="9.88"></line>
+              <line x1="14.12" y1="14.12" x2="19.07" y2="19.07"></line>
+              <line x1="2" y1="12" x2="9" y2="12"></line>
+              <line x1="15" y1="12" x2="22" y2="12"></line>
+            </svg>
+          </div>
+          <h3 data-i18n="svc3_h">متجر الإكسسوارات</h3>
+          <p data-i18n="svc3_p">جنوط، زجاج، فرش داخلي وإلكترونيات — اشتري أو احجز بالتوصيل</p>
+        </div>
+
+        <!-- Service 4: Emergency -->
+        <div class="service-card reveal">
+          <div class="svc-icon-wrap ic-emergency">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+              <line x1="12" y1="9" x2="12" y2="13"></line>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+          </div>
+          <h3 data-i18n="svc4_h">الطوارئ</h3>
+          <p data-i18n="svc4_p">مشكلة على الطريق؟ اطلب مساعدة فورية على مدار الساعة</p>
+        </div>
+
+        <!-- Service 5: Towing -->
+        <div class="service-card reveal">
+          <div class="svc-icon-wrap ic-tow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+          </div>
+          <h3 data-i18n="svc5_h">خدمة الونش</h3>
+          <p data-i18n="svc5_p">احجز ونش قريب منك في أي وقت لنقل سيارتك بأمان</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="how-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="how_tag">ازاي بيشتغل؟</span>
+        <h2 class="section-title"><span class="text-primary" data-i18n="how_title">خطوات بسيطة</span></h2>
+      </div>
+
+      <div class="steps-row">
+        <div class="step-item reveal">
+          <div class="step-num">1</div>
+          <h4 data-i18n="step1_h">حمّل التطبيق</h4>
+          <p data-i18n="step1_p">حمّل CARMA على موبايلك مجانًا</p>
+        </div>
+        <div class="step-item reveal">
+          <div class="step-num">2</div>
+          <h4 data-i18n="step2_h">سجّل حساب</h4>
+          <p data-i18n="step2_p">أنشئ حسابك في ثوانٍ وأضف بيانات سيارتك</p>
+        </div>
+        <div class="step-item reveal">
+          <div class="step-num">3</div>
+          <h4 data-i18n="step3_h">اختار الخدمة</h4>
+          <p data-i18n="step3_p">اختار الخدمة اللي محتاجها من القائمة</p>
+        </div>
+        <div class="step-item reveal">
+          <div class="step-num">4</div>
+          <h4 data-i18n="step4_h">استمتع بالخدمة</h4>
+          <p data-i18n="step4_p">تابع طلبك وقيّم مزود الخدمة</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DOWNLOAD ===== -->
+  <section class="download-section" id="download">
+    <div class="container">
+      <div class="download-card reveal">
+        <div class="download-text">
+          <h2 data-i18n="dl_title">حمّل CARMA دلوقتي</h2>
+          <p data-i18n="dl_sub">متاح قريبًا على Google Play وApp Store.</p>
+        </div>
+        <div class="download-btns">
+          <!-- Button 1: Customer App -->
+          <button class="dl-btn apk" onclick="showComingSoon('customer')">
+            <div class="dl-btn-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <div class="dl-btn-text">
+              <small data-i18n="dl_customer_sub">لأصحاب السيارات والعملاء</small>
+              <strong data-i18n="dl_customer">تطبيق العميل (Customer)</strong>
+            </div>
+          </button>
+
+          <!-- Button 2: Service Provider App -->
+          <button class="dl-btn provider" onclick="showComingSoon('provider')">
+            <div class="dl-btn-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <div class="dl-btn-text">
+              <small data-i18n="dl_provider_sub">للورش ومراكز الصيانة ومقدمي الخدمات</small>
+              <strong data-i18n="dl_provider">تطبيق مقدم الخدمة (Provider)</strong>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/carma_logo.png" alt="CARMA" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+          <span class="footer-logo-txt">CARMA</span>
+          <p data-i18n="ft_desc">رفيقك على الطريق — تطبيق متكامل لكل خدمات سيارتك</p>
+        </div>
+        <div class="footer-links-col">
+          <h5 data-i18n="ft_site">الموقع</h5>
+          <a href="index.html" data-i18n="nav_home">الرئيسية</a>
+          <a href="about.html" data-i18n="nav_about">من نحن</a>
+          <a href="for-you.html" data-i18n="nav_foryou">لك أنت</a>
+        </div>
+        <div class="footer-links-col">
+          <h5 data-i18n="ft_account">الحساب</h5>
+          <a href="login.html" data-i18n="nav_login">تسجيل الدخول</a>
+          <a href="login.html?tab=signup" data-i18n="nav_signup">إنشاء حساب</a>
+        </div>
+        <div class="footer-links-col">
+          <h5 data-i18n="ft_app">التطبيق</h5>
+          <a href="#download" onclick="showComingSoon('customer')" data-i18n="dl_customer">تطبيق العميل</a>
+          <a href="#download" onclick="showComingSoon('provider')" data-i18n="dl_provider">تطبيق مقدم الخدمة</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="ft_copy">© 2026 CARMA. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== MODAL: COMING SOON ===== -->
+  <div class="modal-overlay" id="modalComingSoon" onclick="hideComingSoon()">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <div class="modal-box-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 14 14"></polyline>
+        </svg>
+      </div>
+      <h3 data-i18n="coming_title">قريبًا!</h3>
+      <p data-i18n="coming_p">التطبيق سيكون متاح للتحميل قريبًا. ابقى متابعنا!</p>
+      <button class="btn-primary btn-full" onclick="hideComingSoon()" data-i18n="ok">تمام</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
